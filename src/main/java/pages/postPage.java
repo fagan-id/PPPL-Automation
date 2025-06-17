@@ -12,6 +12,7 @@ public class postPage {
     }
 
     By newPostBtn = By.id("new-post-btn");
+    By myCommentPostBtn = By.id("my-commented-post-button");
     By positionInput = By.id("position");
     By companyInput = By.id("company");
     By vacancyDescInput = By.id("vacancy_description");
@@ -92,5 +93,13 @@ public class postPage {
 
     public void selectPost(){
         driver.findElement(selectPost).click();
+    }
+
+    public void isPostDisplayed(){
+        driver.findElement(selectPost).isDisplayed();
+    }
+
+    public void clickMyComment(){
+        driver.findElement(myCommentPostBtn).click();
     }
 }
