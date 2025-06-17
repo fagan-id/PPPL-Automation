@@ -47,8 +47,8 @@ Feature:  Commenting on Job Vacancy Post by Alumni
 
     Examples:
       | comment       | expectedOutcome|
-      | "Hai"         | "displays the new comment in the comment section on the right side of the post" |
-      | "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Na"         | "displays an error message saying "Maximum 1000 character allowed. You’ve typed (number of character that user typed)"|
+      | "Bagaimana proses seleksinya?"         | "displays the new comment in the comment section on the right side of the post" |
+      | "Terima kasih banyak atas informasi lowongan kerja yang telah dibagikan. Saya sangat menghargai inisiatif alumni dalam membagikan kesempatan ini kepada sesama alumni dan mahasiswa. Saya ingin bertanya lebih lanjut mengenai posisi yang ditawarkan. Apakah posisi ini terbuka untuk fresh graduate atau lebih ditujukan bagi kandidat yang sudah memiliki pengalaman kerja sebelumnya? Selain itu, saya juga ingin mengetahui apakah proses seleksi akan dilakukan secara daring atau luring, serta kira-kira berapa lama waktu yang dibutuhkan untuk mendapatkan kabar lebih lanjut setelah mengirimkan lamaran. Bila memungkinkan, saya juga ingin meminta informasi lebih rinci mengenai deskripsi pekerjaan harian dan struktur tim kerja di perusahaan ini. Sebagai alumni yang baru lulus, saya ingin mempersiapkan diri dengan sebaik mungkin. Mohon bantuannya, dan sekali lagi saya sangat mengapresiasi postingan ini. Semoga informasi ini bermanfaat juga bagi alumni lainnya. Terima kasih dan sukses selalu untuk semuanya!"| "displays an error message saying 'Maximum 1000 character allowed'"|
 
   @positive
   Scenario: Alumni views the list of posts they have commented on
@@ -57,23 +57,6 @@ Feature:  Commenting on Job Vacancy Post by Alumni
     And The user clicks the "My Commented Posts" button
     Then The user is redirected to a list of job vacancy posts they have commented on
 
-
-
-    #  @positive
-#  Scenario: Alumni commenting on a job vacancy post
-#    Given The user is on the job vacancy post detail page
-#    When The user clicks on the comment input field
-#    And The user types a comment into the input field
-#    And The user clicks the "Send" button
-#    Then The system displays the new comment in the comment section on the right side of the post
-#
-#   @negative
-#   Scenario: Alumni is  commenting with text exceeding 1000 characters
-#     Given The user is on the job vacancy post detail page
-#     When The user clicks on the comment input field
-#     And The user types a comment longer than 1000 characters
-#     Then The system displays an error message saying "Maximum 1000 character allowed. You’ve typed (number of character that user typed)"
-#     And The "Send" button becomes disabled
 
 
 

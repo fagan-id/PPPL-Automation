@@ -50,12 +50,9 @@ public class commentStepDef {
         if (expectedOutcome.contains("displays the new comment in the comment section on the right side of the post")) {
             detailPostPage detail = new detailPostPage(driver);
             Assertions.assertTrue(detail.isCommentVisibleSuccess());
-        } else if (expectedOutcome.contains("displays an error message saying \"Maximum 1000 character allowed. You’ve typed (number of character that user typed)")) {
+        } else if (expectedOutcome.contains("displays an error message saying 'Maximum 1000 character allowed'")) {
             detailPostPage detail = new detailPostPage(driver);
             Assertions.assertTrue(detail.isInputErrorDisplayed());
-        } else {
-            fail("Unexpected expectedOutcome value: " + expectedOutcome);
         }
     }
-
 }

@@ -13,6 +13,8 @@ public class profilePage {
     By loginBtn = By.id("login-btn");
     By postsNav = By.id("posts-page");
     By userName = By.xpath("/html/body/main/section/div/div[1]/div[2]/div[1]/div[2]/h2");
+
+    By logoutBtn = By.xpath("/html/body/main/section/div/div[1]/div[2]/div[2]/button");
     public void clickLoginBtn() {
         driver.findElement(loginBtn).click();
     }
@@ -26,5 +28,9 @@ public class profilePage {
     }
     public void clickPostsNav() {
         driver.findElement(postsNav).click();
+    }
+
+    public void logout(){
+        driver.findElement(logoutBtn).click();
     }
 }
